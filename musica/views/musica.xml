@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="musica_musica_action" name="musica"
+                     res_model="musica.musica" />
+		 <menuitem  id="musica_musica_menu_main"
+				    name="Musica"
+				    sequence="1" />
+        <menuitem id="musica_musica_menu"
+                  name="Musica"
+                  action="musica_musica_action"
+                  parent="musica_musica_menu_main"
+                  sequence="1" />
+
+        <record id="musica_musica_view_tree" model="ir.ui.view">
+            <field name="name">Lista canciones</field>
+            <field name="model">musica.musica</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="cancion" />
+                    <field name="genero" />
+                    <field name="anniosalida" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="musica_musica_view_search" model="ir.ui.view">
+            <field name="name">Busqueda canciones</field>
+            <field name="model">musica.musica</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="cancion" />
+                    <field name="genero" />
+                    <field name="anniosalida" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

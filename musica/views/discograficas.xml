@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="discograficas_discograficas_action" name="discograficas"
+                     res_model="discograficas.discograficas" />
+        <menuitem id="discograficas_discograficas_menu"
+                  name="Discograficas"
+                  action="discograficas_discograficas_action"
+                  parent="musica_musica_menu_main"
+                  sequence="1" />
+
+        <record id="discograficas_discograficas_view_tree" model="ir.ui.view">
+            <field name="name">Lista discograficas</field>
+            <field name="model">discograficas.discograficas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    <field name="genero" />
+                    <field name="numartistas" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="discograficas_discograficas_view_search" model="ir.ui.view">
+            <field name="name">Busqueda discograficas</field>
+            <field name="model">discograficas.discograficas</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="genero" />
+                    <field name="numartistas" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

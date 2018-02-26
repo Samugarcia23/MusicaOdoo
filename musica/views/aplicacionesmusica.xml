@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="aplicacionesmusica_aplicacionesmusica_action" name="aplicacionesmusica"
+                     res_model="aplicacionesmusica.aplicacionesmusica" />
+        <menuitem id="aplicacionesmusica_aplicacionesmusica_menu"
+                  name="Aplicaciones"
+                  action="aplicacionesmusica_aplicacionesmusica_action"
+                  parent="musica_musica_menu_main"
+                  sequence="1" />
+
+        <record id="aplicacionesmusica_aplicacionesmusica_view_tree" model="ir.ui.view">
+            <field name="name">Lista aplicaciones</field>
+            <field name="model">aplicacionesmusica.aplicacionesmusica</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    <field name="plataforma" />
+                    <field name="annioSalida" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="aplicacionesmusica_aplicacionesmusica_view_search" model="ir.ui.view">
+            <field name="name">Busqueda aplicaciones</field>
+            <field name="model">aplicacionesmusica.aplicacionesmusica</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="plataforma" />
+                    <field name="annioSalida" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

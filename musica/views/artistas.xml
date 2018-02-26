@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="artistas_artistas_action" name="artistas"
+                     res_model="artistas.artistas" />
+        <menuitem id="artistas_artistas_menu"
+                  name="Artistas"
+                  action="artistas_artistas_action"
+                  parent="musica_musica_menu_main"
+                  sequence="1" />
+
+        <record id="artistas_artistas_view_tree" model="ir.ui.view">
+            <field name="name">Lista artistas</field>
+            <field name="model">artistas.artistas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    <field name="genero" />
+                    <field name="edad" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="artistas_artistas_view_search" model="ir.ui.view">
+            <field name="name">Busqueda artistas</field>
+            <field name="model">artistas.artistas</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="genero" />
+                    <field name="edad" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
